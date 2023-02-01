@@ -29,11 +29,6 @@ namespace Leapfrog.Views.Main
 
         public void SetMainView(IMainView mainView) { }
 
-        private void OnNavigateTo(object? sender, NavigateEventArgs e)
-        {
-            browserPresenter.Navigate(e.Url);
-        }
-
         protected override void OnMainViewLoaded(object? sender, EventArgs e)
         {
             View.SetTop((UserControl)navigationBarPresenter.View);
