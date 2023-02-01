@@ -29,7 +29,7 @@ Frameworks
 
 ## Todo
 This learning projects does not cover the use of *Domain Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. Data, is fed to the *ViewModel* by the *Presenter*, who sets the *DataContext* (read: the *ViewModel*) for the *View*. This help reduce the *ViewModels* responsibility to only concern data/events, and not also dependencies and other logic.
-Note: The *View* should not have any knowledge about *Domain Models* to fully resepect the *MVP pattern* (unlike the original *MVC pattern*)
+Note: The *View* should not have any knowledge about *Domain Models* to fully respect the *MVP pattern* (unlike the original *MVC pattern*)
 
 ## Disclaimer
 There are two sub-patterns to the MVP pattern, as described by Martin Fowler. There is also different opionions whether a View should reference the Presenter or only through subscribable Events. I have chosen the latter approach in this example as it keeps a cleaner separation.
