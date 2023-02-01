@@ -3,7 +3,7 @@
 A learning project in WPF technologies and recent frameworks, such as:
 
 - WPF / C# 6.0
-- MVP (Presenters, Application composition)
+- MVP (Presenters, Layout composition)
 - MVVM (Commands, ViewModels, DataBinding)
 - Dependency Injection and Messaging (separation of concern, loosely-coupled)
 
