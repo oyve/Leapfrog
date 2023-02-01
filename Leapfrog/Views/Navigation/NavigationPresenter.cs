@@ -23,10 +23,5 @@ namespace Leapfrog.Views.Navigation
         {
             
         }
-
-        private void OnNavigateKeyUp(object? sender, EventArgs e)
-        {
-
-        }
     }
 }
