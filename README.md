@@ -4,4 +4,7 @@ A demo project to use and apply following technologies:
 
 - MVP
 - MVVM
-- WindowsCommunity.MVVM
+- (MVP+MVVM = MVPVM)
+- CommunityToolkit.MVVM
+- Dependency Injection
+- 
