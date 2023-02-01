@@ -28,4 +28,4 @@ Frameworks
 - Example of F5 and F6 application-wide Keyboard events (refresh and set to focus to nagivation bar)
 
 ## Todo
-This learning projects does not cover the use of *Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. *Models* are fed to the *ViewModel* (perhaps trimmed or manipulated) by the *Presenter*, who is responsible for setting the *DataContext* (read: the *ViewModel*) to the *View*. This help reduce the *ViewModels* responsibility to only concern data, and not also dependencies and other logic.
+This learning projects does not cover the use of *Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. *Models* are fed to the *ViewModel* (perhaps trimmed or manipulated) by the *Presenter*, who is responsible for setting the *DataContext* (read: the *ViewModel*) to the *View*. This help reduce the *ViewModels* responsibility to only concern data/events, and not also dependencies and other logic.
