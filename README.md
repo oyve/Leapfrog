@@ -1,12 +1,14 @@
 # Leapfrog
 
-A demo project to use and apply following technologies:
+A demo project to use and apply technologies and practicies, such as:
 
 - MVP
 - MVVM
-- (MVP+MVVM = MVPVM)
+- Presenters, ViewModels, Views, Application composition
+- Messaging
+
+Frameworks
 - CommunityToolkit.MVVM
-- Dependency Injection
-- 
+- Microsoft.Extension.DependencyInjection
 
 ![GitHub Logo](/leapfrog.png)
