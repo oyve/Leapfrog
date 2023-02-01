@@ -28,7 +28,7 @@ Frameworks
 - Example of F5 and F6 application-wide Keyboard events (refresh and set to focus to navigation bar)
 
 ## Todo
-This learning projects does not cover the use of *Domain Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. *Domain Models*, or its data, are fed to the *ViewModel* by the *Presenter*, who sets the *DataContext* (read: the *ViewModel*) for the *View*. This help reduce the *ViewModels* responsibility to only concern data/events, and not also dependencies and other logic.
+This learning projects does not cover the use of *Domain Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. Data, is fed to the *ViewModel* by the *Presenter*, who sets the *DataContext* (read: the *ViewModel*) for the *View*. This help reduce the *ViewModels* responsibility to only concern data/events, and not also dependencies and other logic.
 Note: The *View* should not have any knowledge about *Domain Models* to fully resepect the *MVP pattern* (unlike the original *MVC pattern*)
 
 ## Disclaimer
