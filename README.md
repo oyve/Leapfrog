@@ -5,7 +5,7 @@ A learning project in WPF technologies and recent frameworks, such as:
 - WPF / C# 6.0
 - MVP (Presenters, Application composition, separation of concern)
 - MVVM (Commands, ViewModels, DataBinding)
-- Messaging (loosely-coupled)
+- Dependency Injection and Messaging (loosely-coupled)
 
 Frameworks
 - CommunityToolkit.MVVM
