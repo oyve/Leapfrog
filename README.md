@@ -7,6 +7,7 @@ A learning project to use and apply WPF technologies and practices, such as:
 - MVVM
 - Presenters, ViewModels, Views, Application composition
 - Messaging
+- Todo: Make Presenter fetch domain models from a service and feed to ViewModel
 
 Frameworks
 - CommunityToolkit.MVVM
