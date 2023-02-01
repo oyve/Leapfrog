@@ -29,3 +29,4 @@ Frameworks
 
 ## Todo
 This learning projects does not cover the use of *Models* through *Services/Repository*. However, on a general principle, the *Presenter* should be the one who fetch data sources. *Models* are fed to the *ViewModel* (perhaps trimmed or manipulated) by the *Presenter*, who is responsible for setting the *DataContext* (read: the *ViewModel*) to the *View*. This help reduce the *ViewModels* responsibility to only concern data/events, and not also dependencies and other logic.
+PS: The *View* should not have any knowledge about *Models* either to resepect the *MVP pattern*.
