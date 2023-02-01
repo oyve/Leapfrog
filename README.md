@@ -1,6 +1,6 @@
 # Leapfrog
 
-A learning project to use and apply WPF technologies and practices, such as:
+A learning project in WPF technologies and recent frameworks, such as:
 
 - WPF / C#
 - MVP
