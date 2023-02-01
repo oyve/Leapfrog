@@ -2,7 +2,7 @@
 
 A learning project in WPF technologies and recent frameworks, such as:
 
-- WPF / C#
+- WPF / C# 6.0
 - MVP
 - MVVM
 - Presenters, ViewModels, Views, Application composition
