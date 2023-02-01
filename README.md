@@ -20,7 +20,7 @@ Frameworks
 *MainPresenter* is responsible for the overall orchestration of the application layout, whereas *NavigationPresenter* and *BrowserPresenter* is responsible for the *Navigation View* and the *Browser View*.
 
 - This pattern is also referred to as *MVPVM* (MVP+MVVM).
-- A presenter knows only 1 view, but could know other presenters. A Presenter is responsible for orchestrating the View.
+- A presenter knows only 1 view, but could know other presenters. A *Presenter* is responsible for orchestrating its associated *View*.
 - Views communicate their actions via events through either databindings to a *ViewModel* (such as a *Command*), or also *EventHandlers* to *Presenters* where necessary, such as *+=ViewLoaded*).
 - No view logic. A view does not have any references, or know anything about the world. *View* code behind is minimized to a bare minimum.
 - Microsoft.Extension.DependencyInjection is used to resolve runtime dependencies.
