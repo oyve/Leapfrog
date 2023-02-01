@@ -3,11 +3,9 @@
 A learning project in WPF technologies and recent frameworks, such as:
 
 - WPF / C# 6.0
-- MVP
-- MVVM
-- Presenters, ViewModels, Views, Application composition
+- MVP (Presenters, Application composition, separation of concern)
+- MVVM (Commands, ViewModels, DataBinding)
 - Messaging
-- Todo: Make Presenter fetch domain models from a service and feed to ViewModel
 
 Frameworks
 - CommunityToolkit.MVVM
