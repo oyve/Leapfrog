@@ -18,6 +18,7 @@ Frameworks
 ![GitHub Logo](/leapfrog.png)
 
 ##Application structure
+
 *MainPresenter* is responsible for the overall orchestration of the application layout, whereas *NavigationPresenter* and *BrowserPresenter* is responsible for the *Navigation View* and the *Browser View*.
 
 - A presenter knows 1 view
