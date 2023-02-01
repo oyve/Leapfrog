@@ -23,6 +23,7 @@ Frameworks
 - A presenter knows only 1 view, but could know other presenters. A Presenter is responsible for orchestrating the View.
 - Views communicate their actions via events through either databindings to a *ViewModel* (such as a *Command*), or also *EventHandlers* to *Presenters* where necessary, such as *+=ViewLoaded*).
 - No view logic. A view does not have any references, or know anything about the world. *View* code behind is minimized to a bare minimum.
+- Microsoft.Extension.DependencyInjection is used to resolve runtime dependencies.
 - *CommunityToolkit.MVVM.WeakReferenceMessenger* is used to raise and listen to cross-View events, such as loosely-coupled communication between the Navigation View and the Browser View. This is especially seen in the "Back" and "Forward" buttons, who will enable/disable depending on the possibility to navigate backward or forward.
 
 ## Todo
