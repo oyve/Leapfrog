@@ -51,11 +51,6 @@ namespace Leapfrog
             services.AddSingleton<INavigationView, NavigationView>();
             services.AddSingleton<IBrowserView, BrowserView>();
 
-
-
-            //transient for viewmodels
-            //singelton for services
-
             return services.BuildServiceProvider();
         }
     }
