@@ -25,4 +25,4 @@ Frameworks
 - CommunityToolkit.MVVM.WeakReferenceMessenger is used to raise and listen to cross-View events, such as communication between the Navigation View and the Browser View. This is especially seen in the "Back" and "Forward" buttons, who will enable/disable depending on the possibility to navigate backward or forward.
 
 ## Todo
-This learning projects does not cover the use of Models through Services/Repository, however, on a general principle, the Presenter should be the one who fetches a data source. Models will be fed to the ViewModel (perhaps trimmed or manipulated) via the Presenter, who is responsible for setting the DataContext to the View.
+This learning projects does not cover the use of Models through Services/Repository, however, on a general principle, the Presenter should be the one who fetches a data source. Models will be fed to the ViewModel (perhaps trimmed or manipulated) via the Presenter, who is responsible for setting the DataContext (read: the ViewModel) to the View.
