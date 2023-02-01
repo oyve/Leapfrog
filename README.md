@@ -1,7 +1,8 @@
 # Leapfrog
 
-A demo project to use and apply technologies and practicies, such as:
+A learning project to use and apply WPF technologies and practices, such as:
 
+- WPF / C#
 - MVP
 - MVVM
 - Presenters, ViewModels, Views, Application composition
@@ -10,5 +11,7 @@ A demo project to use and apply technologies and practicies, such as:
 Frameworks
 - CommunityToolkit.MVVM
 - Microsoft.Extension.DependencyInjection
+
+(with little emphasize on styling)
 
 ![GitHub Logo](/leapfrog.png)
