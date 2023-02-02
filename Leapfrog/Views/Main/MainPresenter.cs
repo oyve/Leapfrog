@@ -29,10 +29,18 @@ namespace Leapfrog.Views.Main
 
         public void SetMainView(IMainView mainView) { }
 
+
+        ////NOTE: In MVVM you are able to load dynamic views either View First or ViewModel first.
+        ////In VM-First you would typically make a DataTemplate in XAML and map the View and ViewModel, and assign the VM through {Binding}
+        ////Because this is MVP, the View doesn't know anything about the world or types, neither does VM, and thus this is assigned directly, as the Presenter knows the View
+        
         protected override void OnMainViewLoaded(object? sender, EventArgs e)
         {
-            View.SetTop((UserControl)navigationBarPresenter.View);
-            View.SetContent((UserControl)browserPresenter.View);
+            if (View != null)
+            {
+                (View as MainView).TopContent.Content = (ContentControl)navigationBarPresenter.View;
+                (View as MainView).MainContent.Content = (ContentControl)browserPresenter.View;
+            }
         }
     }
 }

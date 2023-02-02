@@ -25,23 +25,5 @@ namespace Leapfrog.Views.Main
         {
             ViewLoaded?.Invoke(this, e);
         }
-
-        public void SetTop(ContentControl control)
-        {
-            //control.Height = 50;
-            SetDock(control, Dock.Top);
-        }
-
-        public void SetContent(ContentControl control)
-        {
-            SetDock(control, Dock.Bottom);
-        }
-
-        void SetDock(ContentControl control, Dock dock)
-        {
-            DockPanel.SetDock(control, dock);
-            MainDockPanel.Children.Add(control);
-        }
-
     }
 }
