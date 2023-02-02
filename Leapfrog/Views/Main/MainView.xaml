@@ -11,7 +11,7 @@
         <KeyBinding Command="{Binding Path=SelectNavigationCommand}" Key="F6" />
     </Window.InputBindings>
     <DockPanel x:Name="MainDockPanel">
-        <ContentControl x:Name="TopContent" DockPanel.Dock="Top" />
-        <ContentControl x:Name="MainContent" DockPanel.Dock="Bottom" />
+        <ContentControl x:Name="TopArea" DockPanel.Dock="Top" />
+        <ContentControl x:Name="MainArea" DockPanel.Dock="Bottom" />
     </DockPanel>
 </Window>

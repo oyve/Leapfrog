@@ -35,8 +35,8 @@ namespace Leapfrog.Views.Main
         {
             base.View_Loaded(sender, e);
 
-            View.TopContent.Content = navigationBarPresenter.View;
-            View.MainContent.Content = browserPresenter.View;
+            View.TopArea.Content = navigationBarPresenter.View;
+            View.MainArea.Content = browserPresenter.View;
         }
     }
 }
