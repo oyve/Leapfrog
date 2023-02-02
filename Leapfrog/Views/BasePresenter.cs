@@ -30,7 +30,7 @@ namespace Leapfrog.Views
             
         }
 
-        protected void SetDataContext(IViewModel viewModel)
+        protected void SetDataContext(BaseViewModel viewModel)
         {
             Guard.IsNotNull(viewModel);
 

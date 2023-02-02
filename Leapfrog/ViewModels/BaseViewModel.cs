@@ -2,7 +2,7 @@
 
 namespace Leapfrog.ViewModels
 {
-    public abstract class BaseViewModel : ObservableObject, IViewModel
+    public abstract class BaseViewModel : ObservableObject
     {
     }
 }
