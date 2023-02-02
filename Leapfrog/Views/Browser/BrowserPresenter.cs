@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using Leapfrog.Messages;
 using System;
+using System.Security.Policy;
 
 namespace Leapfrog.Views.Browser
 {
@@ -35,14 +36,19 @@ namespace Leapfrog.Views.Browser
 
             try
             {
-                View.Navigate(new Uri(url));
+                //(View as BrowserView).Browser.Navigate(new Uri(url));
+                Navigate(new Uri(url));
             }
             catch(Exception ex)
             {
-                //do some logging
                 //show 404
-                View.Navigate(new(Environment.CurrentDirectory + "/Resources/404.html"));
+                Navigate(new Uri(Environment.CurrentDirectory + "/Resources/404.html"));
             }
+        }
+
+        public void Navigate(Uri uri)
+        {
+            (View as BrowserView).Browser.Navigate(uri);
         }
 
         protected override void SubscribeToViewEvents()
@@ -53,7 +59,7 @@ namespace Leapfrog.Views.Browser
         private void View_ViewLoaded(object? sender, EventArgs e)
         {
             Uri url = new(Environment.CurrentDirectory + "/Resources/intro.html");
-            View.Navigate(url);
+            Navigate(url);
         }
 
         public void Receive(NavigateToMessage message)
@@ -63,17 +69,17 @@ namespace Leapfrog.Views.Browser
 
         public void Receive(RefreshMessage message)
         {
-            View.Refresh();
+            (View as BrowserView).Browser.Refresh();
         }
 
         public void Receive(NavigateBackMessage message)
         {
-            View.Back();
+            (View as BrowserView).Browser.GoBack();
         }
 
         public void Receive(NavigateForwardMessage message)
         {
-            View.Forward();
+            (View as BrowserView).Browser.GoForward();
         }
     }
 }

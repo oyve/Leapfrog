@@ -31,29 +31,9 @@ namespace Leapfrog.Views.Browser
         //To reduce Code Behind one could also make bindable Browser extensions
         //https://stackoverflow.com/questions/263551/databind-the-source-property-of-the-webbrowser-in-wpf/265648#265648
 
-        public void Navigate(Uri url)
-        {
-            Browser.Navigate(url);
-        }
-
-        public void Back()
-        {
-            if (Browser.CanGoBack) Browser.GoBack();
-        }
-
-        public void Forward()
-        {
-            if (Browser.CanGoForward) Browser.GoForward();
-        }
-
-        public void Refresh()
-        {
-            Browser.Refresh();
-        }
-
         private void Browser_Navigated(object sender, NavigationEventArgs e)
         {
-            SetSilent(Browser, true); // make it silent
+            SetSilent(Browser, true); // disable javascript errors
             
             NavigationStateChanged?.Invoke(this, new BrowserNavigationStateEventArgs(Browser.CanGoBack, Browser.CanGoForward));
         }
