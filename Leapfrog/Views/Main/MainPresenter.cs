@@ -38,8 +38,8 @@ namespace Leapfrog.Views.Main
         {
             if (View != null)
             {
-                (View as MainView).TopContent.Content = (ContentControl)navigationBarPresenter.View;
-                (View as MainView).MainContent.Content = (ContentControl)browserPresenter.View;
+                (View as MainView).TopContent.Content = navigationBarPresenter.View;
+                (View as MainView).MainContent.Content = browserPresenter.View;
             }
         }
     }
