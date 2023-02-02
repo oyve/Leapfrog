@@ -31,17 +31,9 @@ namespace Leapfrog
             services.AddTransient<NavigationViewModel>();
             services.AddTransient<MainViewModel>();
 
-            //services.AddSingleton<IMainPresenter, MainPresenter>();
-            //services.AddSingleton<INavigationPresenter, NavigationPresenter>();
-            //services.AddSingleton<IBrowserPresenter, BrowserPresenter>();
-
             services.AddSingleton<MainPresenter>();
             services.AddSingleton<NavigationPresenter>();
             services.AddSingleton<BrowserPresenter>();
-
-            services.AddSingleton<IMainView, MainView>();
-            services.AddSingleton<INavigationView, NavigationView>();
-            services.AddSingleton<IBrowserView, BrowserView>();
 
             return services.BuildServiceProvider();
         }

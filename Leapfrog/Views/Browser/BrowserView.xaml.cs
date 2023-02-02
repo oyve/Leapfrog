@@ -12,20 +12,13 @@ namespace Leapfrog.Views.Browser
     /// <summary>
     /// Interaction logic for BrowserView.xaml
     /// </summary>
-    public partial class BrowserView : UserControl, IBrowserView
+    public partial class BrowserView : UserControl
     {
-        public event EventHandler ViewLoaded;
         public event EventHandler<BrowserNavigationStateEventArgs> NavigationStateChanged;
 
         public BrowserView()
         {
             InitializeComponent();
-            Loaded += BrowserView_Loaded;
-        }
-
-        private void BrowserView_Loaded(object sender, RoutedEventArgs e)
-        {
-            ViewLoaded?.Invoke(this, e);
         }
 
         //To reduce Code Behind one could also make bindable Browser extensions

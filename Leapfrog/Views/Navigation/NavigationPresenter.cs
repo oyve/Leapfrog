@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using Leapfrog.Messages;
 using System;
+using System.Security.Policy;
+using System.Windows.Input;
 
 namespace Leapfrog.Views.Navigation
 {
@@ -15,7 +17,10 @@ namespace Leapfrog.Views.Navigation
 
         public void Receive(SelectNavigationMessage message)
         {
-            View.SetFocusNavigation();
+            View.URL.Focusable = true;
+            View.URL.Focus();
+            Keyboard.Focus(View.URL);
+            View.URL.SelectAll();
         }
     }
 }

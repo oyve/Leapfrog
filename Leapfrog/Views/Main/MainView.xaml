@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Leapfrog.Views.Main"
         mc:Ignorable="d"
-        Title="Leapfrog" Height="450" Width="800"
-        Loaded="MainView_Loaded">
+        Title="Leapfrog" Height="450" Width="800">
     <Window.InputBindings>
         <KeyBinding Command="{Binding Path=RefreshCommand}" Key="F5" />
         <KeyBinding Command="{Binding Path=SelectNavigationCommand}" Key="F6" />
