@@ -1,18 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using Leapfrog.Messages;
 using System;
-using System.Security.Policy;
+using System.Windows;
 
 namespace Leapfrog.Views.Browser
 {
-    internal class BrowserPresenter : BasePresenter<IBrowserView>,
-        IBrowserPresenter, 
+    internal class BrowserPresenter : BasePresenter<BrowserView>,
         IRecipient<NavigateToMessage>,
         IRecipient<RefreshMessage>,
         IRecipient<NavigateBackMessage>,
         IRecipient<NavigateForwardMessage>
     {
-        public BrowserPresenter(IBrowserView browserView) : base(browserView)
+        public BrowserPresenter() : base()
         {
             WeakReferenceMessenger.Default.Register<NavigateToMessage>(this);
             WeakReferenceMessenger.Default.Register<RefreshMessage>(this);
@@ -48,16 +47,13 @@ namespace Leapfrog.Views.Browser
 
         public void Navigate(Uri uri)
         {
-            (View as BrowserView).Browser.Navigate(uri);
+            View.Browser.Navigate(uri);
         }
 
-        protected override void SubscribeToViewEvents()
+        protected override void View_Loaded(object? sender, RoutedEventArgs e)
         {
-            View.ViewLoaded += View_ViewLoaded;
-        }
+            base.View_Loaded(sender, e);
 
-        private void View_ViewLoaded(object? sender, EventArgs e)
-        {
             Uri url = new(Environment.CurrentDirectory + "/Resources/intro.html");
             Navigate(url);
         }
@@ -69,17 +65,17 @@ namespace Leapfrog.Views.Browser
 
         public void Receive(RefreshMessage message)
         {
-            (View as BrowserView).Browser.Refresh();
+            View.Browser.Refresh();
         }
 
         public void Receive(NavigateBackMessage message)
         {
-            (View as BrowserView).Browser.GoBack();
+            View.Browser.GoBack();
         }
 
         public void Receive(NavigateForwardMessage message)
         {
-            (View as BrowserView).Browser.GoForward();
+            View.Browser.GoForward();
         }
     }
 }

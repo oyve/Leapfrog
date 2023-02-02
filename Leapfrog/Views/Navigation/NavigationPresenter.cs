@@ -4,24 +4,18 @@ using System;
 
 namespace Leapfrog.Views.Navigation
 {
-    internal class NavigationPresenter : BasePresenter<INavigationView>,
-        INavigationPresenter, 
-        IRecipient<SelectNavigationMessage>
+    internal class NavigationPresenter : BasePresenter<NavigationView>, IRecipient<SelectNavigationMessage>
     {
-        public NavigationPresenter(NavigationViewModel viewModel, INavigationView navigationBarView) : base(navigationBarView)
+        public NavigationPresenter(NavigationViewModel viewModel) : base()
         {
-            SetDataContext(viewModel);
             WeakReferenceMessenger.Default.Register<SelectNavigationMessage>(this);
+
+            SetDataContext(viewModel);
         }
 
         public void Receive(SelectNavigationMessage message)
         {
             View.SetFocusNavigation();
-        }
-
-        protected override void SubscribeToViewEvents()
-        {
-            
         }
     }
 }

@@ -1,44 +1,40 @@
 ﻿using CommunityToolkit.Diagnostics;
 using Leapfrog.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace Leapfrog.Views
 {
-    public interface IBasePresenter<T>
+    internal abstract class BasePresenter<TView> where TView: ContentControl, new()
     {
-        T View { get; }
-    }
+        public BasePresenter() : this(new())
+        {
+        }
 
-    internal abstract class BasePresenter<T> : IBasePresenter<T> where T : IView
-    {
-        public BasePresenter(T view)
+        public BasePresenter(TView view)
         {
             View = view;
 
-            SubscribeToViewEvents();
+            View.Loaded += View_Loaded;
+            View.Unloaded += View_Unloaded;
         }
 
-        public T View { get; }
+        public TView View { get; }
 
-        protected virtual void SubscribeToViewEvents()
+        protected virtual void View_Unloaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            View.ViewLoaded += OnMainViewLoaded;
+            View.DataContext = null;
         }
 
-        protected virtual void OnMainViewLoaded(object? sender, EventArgs e)
+        protected virtual void View_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
+            
         }
 
         protected void SetDataContext(IViewModel viewModel)
         {
             Guard.IsNotNull(viewModel);
 
-            (View as ContentControl).DataContext = viewModel;
+            View.DataContext = viewModel;
         }
     }
 }

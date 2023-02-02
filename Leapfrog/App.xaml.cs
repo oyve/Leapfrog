@@ -17,20 +17,8 @@ namespace Leapfrog
         {
             Services = ConfigureServices();
 
-            IMainPresenter mainPresenter = Services.GetService<IMainPresenter>();
-
-            if (mainPresenter != null)
-            {
-                try
-                {
-                    mainPresenter.ShowView();
-                } catch {
-                    throw;
-                }
-            } else
-            {
-                throw new ApplicationException("MainPresenter does not exist");
-            }
+            MainPresenter mainPresenter = Services.GetService<MainPresenter>();
+            mainPresenter.Show();
         }
 
         public new static App Current => (App)Application.Current;
@@ -43,9 +31,13 @@ namespace Leapfrog
             services.AddTransient<NavigationViewModel>();
             services.AddTransient<MainViewModel>();
 
-            services.AddSingleton<IMainPresenter, MainPresenter>();
-            services.AddSingleton<INavigationPresenter, NavigationPresenter>();
-            services.AddSingleton<IBrowserPresenter, BrowserPresenter>();
+            //services.AddSingleton<IMainPresenter, MainPresenter>();
+            //services.AddSingleton<INavigationPresenter, NavigationPresenter>();
+            //services.AddSingleton<IBrowserPresenter, BrowserPresenter>();
+
+            services.AddSingleton<MainPresenter>();
+            services.AddSingleton<NavigationPresenter>();
+            services.AddSingleton<BrowserPresenter>();
 
             services.AddSingleton<IMainView, MainView>();
             services.AddSingleton<INavigationView, NavigationView>();
