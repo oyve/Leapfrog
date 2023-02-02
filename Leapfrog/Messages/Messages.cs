@@ -2,7 +2,7 @@
 {
     public abstract record BaseMessage();
 
-    public record NavigateToMessage(string Url);
+    public record NavigateToUrlMessage(string Url);
     public record SelectNavigationMessage();
     public record RefreshMessage();
     public record NavigationStateChangedMessage(bool CanGoBack, bool CanGoForward);

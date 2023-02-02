@@ -6,14 +6,14 @@ using System.Windows;
 namespace Leapfrog.Views.Browser
 {
     internal class BrowserPresenter : BasePresenter<BrowserView>,
-        IRecipient<NavigateToMessage>,
+        IRecipient<NavigateToUrlMessage>,
         IRecipient<RefreshMessage>,
         IRecipient<NavigateBackMessage>,
         IRecipient<NavigateForwardMessage>
     {
         public BrowserPresenter() : base()
         {
-            WeakReferenceMessenger.Default.Register<NavigateToMessage>(this);
+            WeakReferenceMessenger.Default.Register<NavigateToUrlMessage>(this);
             WeakReferenceMessenger.Default.Register<RefreshMessage>(this);
             WeakReferenceMessenger.Default.Register<NavigateBackMessage>(this);
             WeakReferenceMessenger.Default.Register<NavigateForwardMessage>(this);
@@ -58,7 +58,7 @@ namespace Leapfrog.Views.Browser
             Navigate(url);
         }
 
-        public void Receive(NavigateToMessage message)
+        public void Receive(NavigateToUrlMessage message)
         {
             Navigate(message.Url);
         }

@@ -53,7 +53,7 @@ namespace Leapfrog.Views.Navigation
 
         private void NavigateTo()
         {
-            var message = new NavigateToMessage(URL);
+            var message = new NavigateToUrlMessage(URL);
             WeakReferenceMessenger.Default.Send(message);
         }
 
